@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Título de la página</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>PULSO MALAGUETA</h1>
+  </header>
+
+  <div id="video-container">
+    <iframe id="video-iframe" src="https://drive.google.com/file/d/1bPskJ_FnLalVk6nuZRiS8CicMcwwDUE3/preview" width="640" height="480" allow="autoplay"></iframe>
+  </div>
+
+  <div id="subtitles-container">
+    <h2>Todos los videos</h2>
+    <h4>03 de junio del 2023</h4>
+    <ul>
+      <li class="video-item" onclick="changeVideo('1bPskJ_FnLalVk6nuZRiS8CicMcwwDUE3')">Video 1</li>
+      <li class="video-item" onclick="changeVideo('1VIS9xRFrOaiaG29g85ek1aqO_vdUMrQk')">Video 2</li>
+      <li class="video-item" onclick="changeVideo('1VKSkZGhPAT5yYm7iQe5akYqiQ1I7Guk7')">Video 3</li>
+      <li class="video-item" onclick="changeVideo('1VM3o-1f5Isdcqs6K3hRrc0WgXNeifExB')">Video 4</li>
+      <li class="video-item" onclick="changeVideo('1V_NqarpKewpD_6GijfXsvVoEg8nI1_Im')">Video 5</li>
+      <li class="video-item" onclick="changeVideo('1Vafh7cEX80hkK7CzDCb6rUjKOV8EDA3c')">Video 6</li>
+      <li class="video-item" onclick="changeVideo('1VcF0b4HAPVHaWDYmpmdJxWY6UvSuVqUR')">Video 7</li>
+      <li class="video-item" onclick="changeVideo('1Vg7Xn_jhEHvOXGvumj6LXpXSEYp3j7N5')">Video 8</li>
+      <li class="video-item" onclick="changeVideo('1Vk5j3uho-3SGVzMcATMaIc7J4pZHvN-b')">Video 9</li>
+      <li class="video-item" onclick="changeVideo('1Vl9Sn8XtkGxzZQyLMVxV63B13-37QKqk')">Video 10</li>
+      <li class="video-item" onclick="changeVideo('1VmXmstT8v57sHT-t4MFVkg3bm5S_9sZG')">Video 11</li>
+      <li class="video-item" onclick="changeVideo('1Vn449MS-4z5ALdb6KhzbBt8jBev4WjxA')">Video 12</li>
+    </ul>
+  </div>
+
+  <script>
+    function changeVideo(videoId) {
+      var videoIframe = document.querySelector("#video-iframe");
+      var videoUrl = "https://drive.google.com/file/d/" + videoId + "/preview";
+      videoIframe.src = videoUrl;
+    }
+  </script>
+</body>
+</html>
