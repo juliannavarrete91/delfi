@@ -10,7 +10,9 @@
   </header>
 
   <div id="video-container">
-    <iframe id="video-iframe" src="https://drive.google.com/file/d/1bPskJ_FnLalVk6nuZRiS8CicMcwwDUE3/preview" width="640" height="480" allow="autoplay"></iframe>
+    <div id="video-iframe-container">
+      <iframe id="video-iframe" src="https://drive.google.com/file/d/1bPskJ_FnLalVk6nuZRiS8CicMcwwDUE3/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
   </div>
 
   <div id="subtitles-container">
@@ -34,9 +36,17 @@
 
   <script>
     function changeVideo(videoId) {
-      var videoIframe = document.querySelector("#video-iframe");
+      var videoContainer = document.querySelector("#video-iframe-container");
       var videoUrl = "https://drive.google.com/file/d/" + videoId + "/preview";
-      videoIframe.src = videoUrl;
+      
+      var iframe = document.createElement("iframe");
+      iframe.src = videoUrl;
+      iframe.width = "640";
+      iframe.height = "480";
+      iframe.allow = "autoplay";
+      
+      videoContainer.innerHTML = "";
+      videoContainer.appendChild(iframe);
     }
   </script>
 </body>
